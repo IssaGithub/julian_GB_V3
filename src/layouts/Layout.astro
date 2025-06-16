@@ -1,0 +1,51 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Professioneller Garten- und Landschaftsbau - Ihr Experte für Pflasterarbeiten, Erdarbeiten, Baumschnitt und mehr" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <meta name="keywords" content="Gartenbau, Landschaftsbau, Pflasterarbeiten, Erdarbeiten, Baumschnitt, Gartenreinigung, Zaunbau, Freibadbau" />
+    <meta name="author" content="Julian Gartenbau" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+  </head>
+  <body class="font-sans antialiased bg-stone-50 text-stone-900">
+    <slot />
+    <script>
+      // Cookie Banner Logic
+      function showCookieBanner() {
+        const banner = document.getElementById('cookie-banner');
+        const accepted = localStorage.getItem('cookies-accepted');
+        if (!accepted && banner) {
+          banner.classList.remove('hidden');
+        }
+      }
+
+      function acceptCookies() {
+        localStorage.setItem('cookies-accepted', 'true');
+        const banner = document.getElementById('cookie-banner');
+        if (banner) {
+          banner.classList.add('hidden');
+        }
+      }
+
+      // Initialize on load
+      document.addEventListener('DOMContentLoaded', showCookieBanner);
+      
+      // Expose function globally
+      (window as any).acceptCookies = acceptCookies;
+    </script>
+  </body>
+</html> 

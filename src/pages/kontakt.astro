@@ -1,0 +1,306 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Kontakt - Julian Gartenbau" description="Kontaktieren Sie Julian Gartenbau für eine kostenlose Beratung. Telefon, E-Mail oder Kontaktformular - wir sind für Sie da.">
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-green-700 to-green-500 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Kontakt</h1>
+        <p class="text-xl max-w-3xl mx-auto">
+          Kontaktieren Sie uns für eine kostenlose Beratung und ein unverbindliches Angebot
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt Content -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        
+        <!-- Kontaktformular -->
+        <div>
+          <h2 class="text-3xl font-bold text-stone-900 mb-6">Nachricht senden</h2>
+          <form id="contact-form" class="space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="firstName" class="block text-sm font-medium text-stone-700 mb-2">
+                  Vorname *
+                </label>
+                <input 
+                  type="text" 
+                  id="firstName" 
+                  name="firstName" 
+                  required
+                  class="w-full px-4 py-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+                  placeholder="Ihr Vorname"
+                />
+              </div>
+              <div>
+                <label for="lastName" class="block text-sm font-medium text-stone-700 mb-2">
+                  Nachname *
+                </label>
+                <input 
+                  type="text" 
+                  id="lastName" 
+                  name="lastName" 
+                  required
+                  class="w-full px-4 py-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+                  placeholder="Ihr Nachname"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label for="email" class="block text-sm font-medium text-stone-700 mb-2">
+                E-Mail-Adresse *
+              </label>
+              <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                required
+                class="w-full px-4 py-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+                placeholder="ihre.email@beispiel.de"
+              />
+            </div>
+
+            <div>
+              <label for="phone" class="block text-sm font-medium text-stone-700 mb-2">
+                Telefonnummer
+              </label>
+              <input 
+                type="tel" 
+                id="phone" 
+                name="phone"
+                class="w-full px-4 py-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+                placeholder="+49 (0) 123 456 789"
+              />
+            </div>
+
+            <div>
+              <label for="service" class="block text-sm font-medium text-stone-700 mb-2">
+                Gewünschte Leistung
+              </label>
+              <select 
+                id="service" 
+                name="service"
+                class="w-full px-4 py-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors"
+              >
+                <option value="">Bitte wählen...</option>
+                <option value="pflasterarbeiten">Pflasterarbeiten</option>
+                <option value="erdarbeiten">Erdarbeiten</option>
+                <option value="baumschnitt">Bäume schneiden</option>
+                <option value="gartenreinigung">Gartenreinigung</option>
+                <option value="zaunbau">Zaunaufbauten</option>
+                <option value="freibadbau">Freibadbau</option>
+                <option value="montagearbeiten">Montagearbeiten</option>
+                <option value="beratung">Allgemeine Beratung</option>
+                <option value="sonstiges">Sonstiges</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="message" class="block text-sm font-medium text-stone-700 mb-2">
+                Nachricht *
+              </label>
+              <textarea 
+                id="message" 
+                name="message" 
+                rows="5" 
+                required
+                class="w-full px-4 py-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-colors resize-vertical"
+                placeholder="Beschreiben Sie Ihr Projekt oder Ihre Anfrage..."
+              ></textarea>
+            </div>
+
+            <!-- DSGVO Checkbox -->
+            <div class="flex items-start">
+              <input 
+                type="checkbox" 
+                id="privacy" 
+                name="privacy" 
+                required
+                class="mt-1 w-4 h-4 text-green-600 border-stone-300 rounded focus:ring-2 focus:ring-green-500"
+              />
+              <label for="privacy" class="ml-3 text-sm text-stone-600">
+                Ich stimme der <a href="/datenschutz" class="text-green-600 hover:text-green-700 underline">Datenschutzerklärung</a> zu und bin damit einverstanden, dass meine Daten zur Bearbeitung meiner Anfrage gespeichert werden. *
+              </label>
+            </div>
+
+            <div class="flex items-start">
+              <input 
+                type="checkbox" 
+                id="newsletter" 
+                name="newsletter"
+                class="mt-1 w-4 h-4 text-green-600 border-stone-300 rounded focus:ring-2 focus:ring-green-500"
+              />
+              <label for="newsletter" class="ml-3 text-sm text-stone-600">
+                Ich möchte gelegentlich Informationen über neue Leistungen und Angebote per E-Mail erhalten. (Optional)
+              </label>
+            </div>
+
+            <button 
+              type="submit"
+              class="w-full bg-green-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-700 transition-colors focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+            >
+              Nachricht senden
+            </button>
+
+            <p class="text-sm text-stone-500">
+              * Pflichtfelder
+            </p>
+          </form>
+
+          <!-- Erfolgs-/Fehlermeldung -->
+          <div id="form-message" class="mt-6 hidden">
+            <div id="success-message" class="bg-green-50 border border-green-200 text-green-800 px-4 py-3 rounded-lg hidden">
+              <div class="flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                </svg>
+                Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns in Kürze bei Ihnen.
+              </div>
+            </div>
+            <div id="error-message" class="bg-red-50 border border-red-200 text-red-800 px-4 py-3 rounded-lg hidden">
+              <div class="flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+                </svg>
+                Es gab einen Fehler beim Senden Ihrer Nachricht. Bitte versuchen Sie es erneut oder kontaktieren Sie uns direkt.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kontaktinformationen -->
+        <div>
+          <h2 class="text-3xl font-bold text-stone-900 mb-6">Kontaktinformationen</h2>
+          
+          <div class="space-y-6 mb-8">
+            <div class="flex items-start">
+              <div class="bg-green-100 p-3 rounded-lg mr-4">
+                <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-stone-900 mb-1">Telefon</h3>
+                <p class="text-stone-600">+49 (0) 123 456 789</p>
+                <p class="text-sm text-stone-500">Mo-Fr: 7:00 - 17:00 Uhr</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="bg-green-100 p-3 rounded-lg mr-4">
+                <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-stone-900 mb-1">E-Mail</h3>
+                <p class="text-stone-600">kontakt@julian-gartenbau.de</p>
+                <p class="text-sm text-stone-500">Wir antworten innerhalb von 24h</p>
+              </div>
+            </div>
+
+            <div class="flex items-start">
+              <div class="bg-green-100 p-3 rounded-lg mr-4">
+                <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-stone-900 mb-1">Adresse</h3>
+                <p class="text-stone-600">
+                  Musterstraße 123<br>
+                  12345 Musterstadt<br>
+                  Deutschland
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Öffnungszeiten -->
+          <div class="bg-stone-50 rounded-lg p-6 mb-8">
+            <h3 class="font-semibold text-stone-900 mb-4">Öffnungszeiten</h3>
+            <div class="space-y-2 text-sm">
+              <div class="flex justify-between">
+                <span class="text-stone-600">Montag - Freitag:</span>
+                <span class="text-stone-900 font-medium">7:00 - 17:00 Uhr</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-stone-600">Samstag:</span>
+                <span class="text-stone-900 font-medium">8:00 - 14:00 Uhr</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-stone-600">Sonntag:</span>
+                <span class="text-stone-900 font-medium">Nach Vereinbarung</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Notfallkontakt -->
+          <div class="bg-red-50 border border-red-200 rounded-lg p-6">
+            <h3 class="font-semibold text-red-900 mb-2">Notfall-Service</h3>
+            <p class="text-red-700 text-sm mb-3">
+              Bei Notfällen (z.B. umgestürzte Bäume) erreichen Sie uns auch außerhalb der Geschäftszeiten:
+            </p>
+            <p class="text-red-900 font-semibold">📞 +49 (0) 123 456 999</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script>
+  // Kontaktformular Handler
+  document.getElementById('contact-form')?.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    const messageDiv = document.getElementById('form-message');
+    const successDiv = document.getElementById('success-message');
+    const errorDiv = document.getElementById('error-message');
+    
+    // Zeige Loading-State (optional)
+    const submitButton = this.querySelector('button[type="submit"]');
+    const originalText = submitButton.textContent;
+    submitButton.textContent = 'Wird gesendet...';
+    submitButton.disabled = true;
+    
+    try {
+      // Hier würde normalerweise der API-Call stattfinden
+      // Für Demo-Zwecke simulieren wir einen erfolgreichen Submit
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Erfolg anzeigen
+      messageDiv.classList.remove('hidden');
+      successDiv.classList.remove('hidden');
+      errorDiv.classList.add('hidden');
+      
+      // Formular zurücksetzen
+      this.reset();
+      
+    } catch (error) {
+      // Fehler anzeigen
+      messageDiv.classList.remove('hidden');
+      errorDiv.classList.remove('hidden');
+      successDiv.classList.add('hidden');
+    } finally {
+      // Button zurücksetzen
+      submitButton.textContent = originalText;
+      submitButton.disabled = false;
+    }
+  });
+</script> 

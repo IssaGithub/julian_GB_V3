@@ -1,0 +1,16 @@
+{
+  "name": "julian-gartenbau-website",
+  "version": "1.0.0",
+  "description": "Moderne Website für Garten- und Landschaftsbau",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "keywords": ["astro", "gartenbau", "landschaftsbau", "website"],
+  "author": "",
+  "license": "ISC"
+}

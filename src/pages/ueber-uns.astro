@@ -1,0 +1,173 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Über uns - Julian Gartenbau" description="Erfahren Sie mehr über Julian Gartenbau - Ihr vertrauensvoller Partner für professionellen Garten- und Landschaftsbau seit über 15 Jahren.">
+  <Header />
+  
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-green-700 to-green-500 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Über uns</h1>
+        <p class="text-xl max-w-3xl mx-auto">
+          Lernen Sie Julian Gartenbau kennen - Ihr vertrauensvoller Partner für professionellen Garten- und Landschaftsbau
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hauptcontent -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold text-stone-900 mb-6">
+            Unsere Geschichte
+          </h2>
+          <p class="text-lg text-stone-600 mb-6">
+            Seit über 15 Jahren sind wir Ihr zuverlässiger Partner für alle Belange rund um Garten- und Landschaftsbau. Was als kleiner Familienbetrieb begann, hat sich zu einem etablierten Unternehmen in der Region entwickelt.
+          </p>
+          <p class="text-lg text-stone-600 mb-6">
+            Unsere Leidenschaft gilt der Gestaltung von Außenräumen, die nicht nur schön aussehen, sondern auch funktional und nachhaltig sind. Dabei legen wir besonderen Wert auf Qualität, Zuverlässigkeit und eine enge Zusammenarbeit mit unseren Kunden.
+          </p>
+          <p class="text-lg text-stone-600">
+            Von der ersten Beratung bis zur finalen Umsetzung begleiten wir Sie persönlich und sorgen dafür, dass Ihre Gartenträume Wirklichkeit werden.
+          </p>
+        </div>
+        <div>
+          <img src="/api/placeholder/600/400" alt="Unser Team bei der Arbeit" class="rounded-lg shadow-lg">
+        </div>
+      </div>
+
+      <!-- Unsere Werte -->
+      <div class="bg-stone-50 rounded-xl p-8 mb-16">
+        <h2 class="text-3xl font-bold text-stone-900 text-center mb-12">Unsere Werte</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="text-center">
+            <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-stone-900 mb-2">Qualität</h3>
+            <p class="text-stone-600">
+              Wir verwenden nur hochwertige Materialien und arbeiten nach den höchsten Standards der Branche.
+            </p>
+          </div>
+          <div class="text-center">
+            <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-stone-900 mb-2">Zuverlässigkeit</h3>
+            <p class="text-stone-600">
+              Termingerecht und verbindlich - auf uns können Sie sich verlassen.
+            </p>
+          </div>
+          <div class="text-center">
+            <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-stone-900 mb-2">Nachhaltigkeit</h3>
+            <p class="text-stone-600">
+              Umweltbewusste Arbeitsweise und nachhaltige Lösungen für die Zukunft.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Leistungsspektrum -->
+      <div class="mb-16">
+        <h2 class="text-3xl font-bold text-stone-900 text-center mb-12">Unser Leistungsspektrum</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white border border-stone-200 rounded-lg p-6">
+            <h3 class="text-xl font-semibold text-stone-900 mb-4">Gartenbau & Landschaftsgestaltung</h3>
+            <ul class="space-y-2 text-stone-600">
+              <li>• Gartenplanung und -design</li>
+              <li>• Pflanzarbeiten und Bepflanzung</li>
+              <li>• Rasenneuanlage und -pflege</li>
+              <li>• Beetgestaltung</li>
+              <li>• Sichtschutz und Hecken</li>
+            </ul>
+          </div>
+          <div class="bg-white border border-stone-200 rounded-lg p-6">
+            <h3 class="text-xl font-semibold text-stone-900 mb-4">Baumaßnahmen</h3>
+            <ul class="space-y-2 text-stone-600">
+              <li>• Pflasterarbeiten aller Art</li>
+              <li>• Terrassenbau</li>
+              <li>• Wegebau</li>
+              <li>• Einfahrten</li>
+              <li>• Mauern und Einfassungen</li>
+            </ul>
+          </div>
+          <div class="bg-white border border-stone-200 rounded-lg p-6">
+            <h3 class="text-xl font-semibold text-stone-900 mb-4">Spezialleistungen</h3>
+            <ul class="space-y-2 text-stone-600">
+              <li>• Freibadbau und Poolanlagen</li>
+              <li>• Zaunbau und Tore</li>
+              <li>• Erdarbeiten und Aushub</li>
+              <li>• Drainage und Entwässerung</li>
+              <li>• Baumfällung und -schnitt</li>
+            </ul>
+          </div>
+          <div class="bg-white border border-stone-200 rounded-lg p-6">
+            <h3 class="text-xl font-semibold text-stone-900 mb-4">Service & Wartung</h3>
+            <ul class="space-y-2 text-stone-600">
+              <li>• Regelmäßige Gartenpflege</li>
+              <li>• Winterdienst</li>
+              <li>• Gartenreinigung</li>
+              <li>• Wartung von Anlagen</li>
+              <li>• Reparaturservice</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Warum uns wählen -->
+      <div class="bg-green-50 rounded-xl p-8">
+        <h2 class="text-3xl font-bold text-stone-900 text-center mb-8">Warum Julian Gartenbau?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-green-600 mb-2">15+</div>
+            <div class="text-stone-700">Jahre Erfahrung</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-green-600 mb-2">500+</div>
+            <div class="text-stone-700">Projekte realisiert</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-green-600 mb-2">100%</div>
+            <div class="text-stone-700">Kundenzufriedenheit</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-green-600 mb-2">24/7</div>
+            <div class="text-stone-700">Notfallservice</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 bg-green-600 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        Überzeugt? Lassen Sie uns sprechen!
+      </h2>
+      <p class="text-xl mb-8 max-w-3xl mx-auto">
+        Kontaktieren Sie uns für ein unverbindliches Beratungsgespräch und lernen Sie uns persönlich kennen.
+      </p>
+      <a href="/kontakt" class="bg-white text-green-600 hover:bg-stone-100 px-8 py-3 rounded-lg text-lg font-semibold transition-colors inline-block">
+        Jetzt Kontakt aufnehmen
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout> 
