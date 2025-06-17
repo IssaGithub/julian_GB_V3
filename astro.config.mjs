@@ -5,8 +5,8 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   integrations: [tailwind(), sitemap()],
   output: 'static',
-  site: 'https://YOURUSERNAME.github.io',
-  base: '/julian_GB_V3',
+  site: 'https://issagithub.github.io',
+  base: '/bowa',
   build: {
     assets: 'assets'
   }
