@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.julian-gorreja-gartenbau.de/sitemap-index.xml
+
+# Block access to private files
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /admin/
+Disallow: /private/
+
+# Allow important pages
+Allow: /
+Allow: /leistungen
+Allow: /kontakt
+Allow: /ueber-uns
+Allow: /impressum
+Allow: /datenschutz
+
+# Crawl-delay (be nice to servers)
+Crawl-delay: 1 

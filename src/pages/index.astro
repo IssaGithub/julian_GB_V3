@@ -4,7 +4,12 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Julian Gartenbau - Professioneller Garten- und Landschaftsbau">
+<Layout 
+  title="Julian Gorreja Gartenbau - Professioneller Garten- und Landschaftsbau in Heilbronn"
+  description="✓ Über 15 Jahre Erfahrung ✓ Pflasterarbeiten ✓ Erdarbeiten ✓ Baumschnitt ✓ Freibadbau ✓ Kostenlose Beratung in Heilbronn und Umgebung"
+  keywords="Gartenbau Heilbronn, Landschaftsbau Heilbronn, Pflasterarbeiten, Erdarbeiten, Baumschnitt, Gartenreinigung, Zaunbau, Freibadbau, Julian Gorreja, Gartenbauer Heilbronn"
+  type="website"
+>
   <Header />
   
   <!-- Hero Section -->
@@ -185,4 +190,58 @@ import Footer from '../components/Footer.astro';
   </section>
 
   <Footer />
-</Layout> 
+</Layout>
+
+<!-- Additional Structured Data for Services -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Garten- und Landschaftsbau",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Julian Gorreja Gartenbau",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Werderstr 164",
+      "addressLocality": "Heilbronn",
+      "postalCode": "74074",
+      "addressCountry": "DE"
+    }
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Heilbronn"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Gartenbau Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Pflasterarbeiten",
+          "description": "Hochwertige Pflasterarbeiten für Einfahrten, Terrassen und Wege"
+        }
+      },
+      {
+        "@type": "Offer", 
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Erdarbeiten",
+          "description": "Professionelle Aushub- und Erdarbeiten als Grundlage für Gartenbaumaßnahmen"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service", 
+          "name": "Freibadbau",
+          "description": "Kompletter Poolbau von der Planung bis zur schlüsselfertigen Übergabe"
+        }
+      }
+    ]
+  }
+}
+</script> 

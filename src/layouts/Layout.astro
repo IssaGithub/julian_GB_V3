@@ -2,24 +2,124 @@
 export interface Props {
   title: string;
   description?: string;
+  keywords?: string;
+  image?: string;
+  type?: 'website' | 'article' | 'service';
+  canonical?: string;
 }
 
-const { title, description = "Professioneller Garten- und Landschaftsbau - Ihr Experte für Pflasterarbeiten, Erdarbeiten, Baumschnitt und mehr" } = Astro.props;
+const { 
+  title, 
+  description = "Professioneller Garten- und Landschaftsbau in Heilbronn - Ihr Experte für Pflasterarbeiten, Erdarbeiten, Baumschnitt und mehr", 
+  keywords = "Gartenbau, Landschaftsbau, Pflasterarbeiten, Erdarbeiten, Baumschnitt, Gartenreinigung, Zaunbau, Freibadbau, Heilbronn, Julian Gorreja",
+  image = "/api/placeholder/1200/630",
+  type = 'website',
+  canonical
+} = Astro.props;
+
+const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site);
+const currentYear = new Date().getFullYear();
 ---
 
 <!doctype html>
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Primary Meta Tags -->
     <title>{title}</title>
-    <meta name="keywords" content="Gartenbau, Landschaftsbau, Pflasterarbeiten, Erdarbeiten, Baumschnitt, Gartenreinigung, Zaunbau, Freibadbau" />
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={keywords} />
     <meta name="author" content="Julian Gorreja" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="German" />
+    <meta name="geo.region" content="DE-BW" />
+    <meta name="geo.placename" content="Heilbronn" />
+    <meta name="geo.position" content="49.1427;9.2109" />
+    <meta name="ICBM" content="49.1427, 9.2109" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    <meta property="og:image" content={new URL(image, Astro.site)} />
+    <meta property="og:locale" content="de_DE" />
+    <meta property="og:site_name" content="Julian Gorreja Gartenbau" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={new URL(image, Astro.site)} />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    
+    <!-- Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Julian Gorreja Gartenbau",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://www.julian-gorreja-gartenbau.de/api/placeholder/1200/630"
+        },
+        "description": "Professioneller Garten- und Landschaftsbau in Heilbronn. Spezialist für Pflasterarbeiten, Erdarbeiten, Baumschnitt, Gartenreinigung, Zaunbau und Freibadbau.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Werderstr 164",
+          "addressLocality": "Heilbronn",
+          "postalCode": "74074",
+          "addressCountry": "DE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 49.1427,
+          "longitude": 9.2109
+        },
+        "url": "https://www.julian-gorreja-gartenbau.de",
+        "telephone": "01729136853",
+        "email": "juliangorreja9@gmail.com",
+        "openingHours": [
+          "Mo-Fr 07:00-17:00",
+          "Sa 08:00-14:00",
+          "Su by appointment"
+        ],
+        "serviceArea": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": 49.1427,
+            "longitude": 9.2109
+          },
+          "geoRadius": "50000"
+        },
+        "services": [
+          "Pflasterarbeiten",
+          "Erdarbeiten", 
+          "Baumschnitt",
+          "Gartenreinigung",
+          "Zaunbau",
+          "Freibadbau",
+          "Montagearbeiten"
+        ],
+        "foundingDate": {currentYear - 15},
+        "priceRange": "€€"
+      }
+    </script>
   </head>
   <body class="font-sans antialiased bg-stone-50 text-stone-900">
     <slot />
