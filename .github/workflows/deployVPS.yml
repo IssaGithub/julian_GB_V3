@@ -1,0 +1,41 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main  # Change if your default branch is different
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Optionally, add a build step here if your project needs to be built
+      # - name: Build project
+      #   run: npm install && npm run build
+
+      - name: Copy files to VPS via SSH
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: 22
+          source: "."
+          target: "/var/www/gartenbauJulian"
+          strip_components: 1 # Removes the root folder when copying
+
+      # Optionally, you can run remote commands via SSH after upload
+      # - name: Run remote SSH commands
+      #   uses: appleboy/ssh-action@v0.1.10
+      #   with:
+      #     host: ${{ secrets.VPS_HOST }}
+      #     username: ${{ secrets.VPS_USER }}
+      #     key: ${{ secrets.VPS_SSH_KEY }}
+      #     port: 22
+      #     script: |
+      #       cd /var/www/bowa
+      #       # Add commands like 'npm install' or 'pm2 restart' if needed
