@@ -5,8 +5,8 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   integrations: [tailwind(), sitemap()],
   output: 'static',
-  site: 'https://issagithub.github.io',
-  base: '/bowa',
+  // Site URL can be added later when you have a domain
+  // site: 'http://your-domain.com',
   build: {
     assets: 'assets'
   }
