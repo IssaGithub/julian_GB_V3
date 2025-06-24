@@ -265,42 +265,53 @@ import Footer from '../components/Footer.astro';
 
 <script>
   // Kontaktformular Handler
-  document.getElementById('contact-form')?.addEventListener('submit', async function(e) {
-    e.preventDefault();
+  document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contact-form') as HTMLFormElement;
     
-    const formData = new FormData(this);
-    const messageDiv = document.getElementById('form-message');
-    const successDiv = document.getElementById('success-message');
-    const errorDiv = document.getElementById('error-message');
-    
-    // Zeige Loading-State (optional)
-    const submitButton = this.querySelector('button[type="submit"]');
-    const originalText = submitButton.textContent;
-    submitButton.textContent = 'Wird gesendet...';
-    submitButton.disabled = true;
-    
-    try {
-      // Hier würde normalerweise der API-Call stattfinden
-      // Für Demo-Zwecke simulieren wir einen erfolgreichen Submit
-      await new Promise(resolve => setTimeout(resolve, 1000));
+    contactForm?.addEventListener('submit', async function(e: Event) {
+      e.preventDefault();
       
-      // Erfolg anzeigen
-      messageDiv.classList.remove('hidden');
-      successDiv.classList.remove('hidden');
-      errorDiv.classList.add('hidden');
+      // Proper type casting for form and elements
+      const form = e.target as HTMLFormElement;
+      const messageDiv = document.getElementById('form-message') as HTMLDivElement | null;
+      const successDiv = document.getElementById('success-message') as HTMLDivElement | null;
+      const errorDiv = document.getElementById('error-message') as HTMLDivElement | null;
       
-      // Formular zurücksetzen
-      this.reset();
+      // Get submit button with proper typing
+      const submitButton = form.querySelector('button[type="submit"]') as HTMLButtonElement | null;
+      const originalText = submitButton?.textContent || 'Nachricht senden';
       
-    } catch (error) {
-      // Fehler anzeigen
-      messageDiv.classList.remove('hidden');
-      errorDiv.classList.remove('hidden');
-      successDiv.classList.add('hidden');
-    } finally {
-      // Button zurücksetzen
-      submitButton.textContent = originalText;
-      submitButton.disabled = false;
-    }
+      // Show loading state
+      if (submitButton) {
+        submitButton.textContent = 'Wird gesendet...';
+        submitButton.disabled = true;
+      }
+      
+      try {
+        // Hier würde normalerweise der API-Call stattfinden
+        // Für Demo-Zwecke simulieren wir einen erfolgreichen Submit
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        
+        // Erfolg anzeigen
+        messageDiv?.classList.remove('hidden');
+        successDiv?.classList.remove('hidden');
+        errorDiv?.classList.add('hidden');
+        
+        // Formular zurücksetzen
+        form.reset();
+        
+      } catch (error) {
+        // Fehler anzeigen
+        messageDiv?.classList.remove('hidden');
+        errorDiv?.classList.remove('hidden');
+        successDiv?.classList.add('hidden');
+      } finally {
+        // Button zurücksetzen
+        if (submitButton) {
+          submitButton.textContent = originalText;
+          submitButton.disabled = false;
+        }
+      }
+    });
   });
 </script> 

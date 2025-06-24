@@ -10,10 +10,16 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "keywords": ["astro", "gartenbau", "landschaftsbau", "website"],
+  "keywords": [
+    "astro",
+    "gartenbau",
+    "landschaftsbau",
+    "website"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@astrojs/check": "^0.9.4",
     "@astrojs/sitemap": "^3.0.3",
     "@astrojs/tailwind": "^5.1.0",
     "astro": "^4.8.6",
@@ -21,6 +27,6 @@
   },
   "devDependencies": {
     "@types/node": "^20.12.7",
-    "typescript": "^5.4.5"
+    "typescript": "^5.8.3"
   }
 }
