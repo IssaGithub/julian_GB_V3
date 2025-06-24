@@ -1,7 +1,7 @@
 {
-  "name": "julian-gartenbau-website",
+  "name": "julian-gorreja-gartenbau-website",
   "version": "1.0.0",
-  "description": "Moderne Website für Garten- und Landschaftsbau",
+  "description": "Moderne Website für Julian Gorreja Garten- und Landschaftsbau",
   "type": "module",
   "scripts": {
     "dev": "astro dev",
@@ -14,9 +14,10 @@
     "astro",
     "gartenbau",
     "landschaftsbau",
-    "website"
+    "website",
+    "julian-gorreja"
   ],
-  "author": "",
+  "author": "Julian Gorreja",
   "license": "ISC",
   "dependencies": {
     "@astrojs/check": "^0.9.4",

@@ -3,69 +3,56 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       <!-- Kontakt -->
       <div>
-        <h3 class="text-lg font-semibold text-white mb-4">Kontakt</h3>
+        <h3 class="text-white font-semibold text-lg mb-4">Kontakt</h3>
         <div class="space-y-2">
-          <p class="flex items-center">
-            <svg class="w-5 h-5 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
-            </svg>
-            kontakt@julian-gartenbau.de
+          <p>
+            <a href="mailto:juliangorreja9@gmail.com" class="hover:text-green-400 transition-colors">
+              juliangorreja9@gmail.com
+            </a>
           </p>
-          <p class="flex items-center">
-            <svg class="w-5 h-5 mr-2 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
-            </svg>
-            +49 (0) 123 456 789
-          </p>
-          <p class="flex items-start">
-            <svg class="w-5 h-5 mr-2 mt-1 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"></path>
-            </svg>
-            <span>
-              Musterstraße 123<br>
-              12345 Musterstadt<br>
-              Deutschland
-            </span>
+          <p>
+            <a href="tel:01729136853" class="hover:text-green-400 transition-colors">
+              01729136853
+            </a>
           </p>
         </div>
       </div>
 
-      <!-- Leistungen -->
+      <!-- Adresse -->
       <div>
-        <h3 class="text-lg font-semibold text-white mb-4">Unsere Leistungen</h3>
-        <ul class="space-y-2">
-          <li><a href="/leistungen#pflasterarbeiten" class="hover:text-green-400 transition-colors">Pflasterarbeiten</a></li>
-          <li><a href="/leistungen#erdarbeiten" class="hover:text-green-400 transition-colors">Erdarbeiten</a></li>
-          <li><a href="/leistungen#baumschnitt" class="hover:text-green-400 transition-colors">Bäume schneiden</a></li>
-          <li><a href="/leistungen#gartenreinigung" class="hover:text-green-400 transition-colors">Gartenreinigung</a></li>
-          <li><a href="/leistungen#zaunbau" class="hover:text-green-400 transition-colors">Zaunaufbauten</a></li>
-          <li><a href="/leistungen#freibadbau" class="hover:text-green-400 transition-colors">Freibadbau</a></li>
-        </ul>
+        <h3 class="text-white font-semibold text-lg mb-4">Adresse</h3>
+        <address class="not-italic text-stone-300">
+          Werderstr 164<br>
+          74074 Heilbronn<br>
+          Deutschland
+        </address>
       </div>
 
-      <!-- Rechtliches -->
+      <!-- Schnelllinks -->
       <div>
-        <h3 class="text-lg font-semibold text-white mb-4">Rechtliches</h3>
+        <h3 class="text-white font-semibold text-lg mb-4">Navigation</h3>
         <ul class="space-y-2">
-          <li><a href="/impressum" class="hover:text-green-400 transition-colors">Impressum</a></li>
-          <li><a href="/datenschutz" class="hover:text-green-400 transition-colors">Datenschutzerklärung</a></li>
+          <li><a href="/" class="hover:text-green-400 transition-colors">Start</a></li>
+          <li><a href="/leistungen" class="hover:text-green-400 transition-colors">Leistungen</a></li>
+          <li><a href="/ueber-uns" class="hover:text-green-400 transition-colors">Über uns</a></li>
+          <li><a href="/kontakt" class="hover:text-green-400 transition-colors">Kontakt</a></li>
         </ul>
-        <div class="mt-6">
-          <h4 class="text-sm font-semibold text-white mb-2">Öffnungszeiten</h4>
-          <p class="text-sm">
-            Mo-Fr: 7:00 - 17:00 Uhr<br>
-            Sa: 8:00 - 14:00 Uhr<br>
-            So: Nach Vereinbarung
-          </p>
-        </div>
       </div>
     </div>
 
-    <div class="border-t border-stone-700 mt-8 pt-8 text-center">
-      <p class="text-stone-400">
-        &copy; 2024 Julian Gartenbau. Alle Rechte vorbehalten.
-      </p>
+    <!-- Rechtliches -->
+    <div class="border-t border-stone-700 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center">
+      <div class="flex space-x-6 mb-4 sm:mb-0">
+        <a href="/impressum" class="text-stone-400 hover:text-green-400 transition-colors text-sm">
+          Impressum
+        </a>
+        <a href="/datenschutz" class="text-stone-400 hover:text-green-400 transition-colors text-sm">
+          Datenschutz
+        </a>
+      </div>
+      <div class="text-stone-400 text-sm">
+        &copy; 2024 Julian Gorreja Gartenbau. Alle Rechte vorbehalten.
+      </div>
     </div>
   </div>
 </footer>
